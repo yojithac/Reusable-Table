@@ -1,0 +1,24 @@
+  <table>
+      <thead>
+        <tr>
+            <th *ngFor="let item of tableDetails.headers"  class="tHead">
+              <span>{{item}} 
+              </span>
+            </th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of tableDetails.data " 
+  class="fingerPointer">
+  <td *ngFor="let key of keyValues" class="bodyValues">
+        {{employee[key]}}
+  </td>
+</tr>
+    </tbody>
+  </table>
+  
+<div class="pagination">
+    <a href="#" (click)="prev()">&laquo;</a>
+    <a *ngFor="let pages of numbers" (click)="nextPage(pages)" [ngClass]="{'active': pages == index}">{{pages}}</a>
+    <a href="#" (click)="next()">&raquo;</a>
+  </div>

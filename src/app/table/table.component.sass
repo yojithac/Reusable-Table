@@ -1,0 +1,53 @@
+\:host ::ng-deep
+  table
+    table-layout: fixed
+    width: 100%
+
+  th
+    width: 20%
+
+  table
+    thead
+      position: fixed
+    tbody
+      height: 500px
+      display: block
+      overflow: scroll
+      border: 2px solid black
+      border-collapse: separate
+      border-spacing: 4px 
+    td
+      word-wrap: break-word
+      height: 20px
+      white-spacing: normal
+
+    th
+      word-wrap: break-word
+      background: darkblue
+      color: white
+      width: 20%
+
+    td, th
+      text-align: left
+      padding: 5px 10px
+
+    tr:nth-child(odd)
+      background: lightblue
+  .pagination
+  display: inline-block
+
+  a
+    color: black
+    float: left
+    padding: 8px 16px
+    text-decoration: none
+    transition: background-color .3s
+    border: 1px solid #ddd
+
+    &.active
+      background-color: #4CAF50
+      color: white
+      border: 1px solid #4CAF50
+
+    &:hover:not(.active)
+      background-color: #ddd
